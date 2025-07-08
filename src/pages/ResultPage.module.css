@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.questionCard {
+  width: 90%;
+  max-width: 400px;
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.questionCard.truth {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  border: 2px solid #3498db;
+}
+
+.questionCard.dare {
+  background: linear-gradient(135deg, var(--hot-pink), #e74c3c);
+  border: 2px solid var(--hot-pink);
+}
+
+.questionType {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-bg);
+  color: var(--accent-color);
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 1px solid var(--accent-color);
+}
+
+.questionText {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: white;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.notification {
+  position: fixed;
+  bottom: 20px;
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: translateY(20px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+} 
