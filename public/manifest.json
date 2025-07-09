@@ -1,0 +1,22 @@
+{
+  "name": "聚会真心话大冒险",
+  "short_name": "真心话大冒险",
+  "description": "有趣的多人互动聚会游戏",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#7c3aed",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+} 
